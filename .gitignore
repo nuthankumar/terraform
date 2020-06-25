@@ -1,0 +1,7 @@
+abc.txt
+.terraform
+ansible/*/*
+ansible
+terraform.tfstate.d
+terraform.tfstate.d/*
+terraform.tfstate.d/*/*
