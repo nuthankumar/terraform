@@ -1,4 +1,5 @@
 resource "local_file" "preconfig_file" {
+  count = "${terraform.workspace != "dev" && terraform.workspace !="stage" ? 1 : 0}"
   content  = "${join("", data.template_file.preconfig_privatelan.*.rendered)}"
   filename = "ansible/preconfig/preconfig.yml"
 }
